@@ -1,12 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <h2>Ecosystem</h2>
     <div class="my-center">
       <div class="my-content">
-        <router-link to="/hello">go to hello</router-link>
-        <router-link to="/hello/one">go to One</router-link>
+        <router-link to="/">go to home</router-link>
+        <span>我是默认的</span>
       </div>
     </div>
     <router-view></router-view>
@@ -15,10 +13,10 @@
 
 <script>
 export default {
-  name: 'myHello',
+  name: 'defaultOne',
   data () {
     return {
-      msg: 'myself vuejs'
+      msg: 'hello/default vuejs'
     }
   }
 }
