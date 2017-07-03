@@ -7,7 +7,14 @@
         <span>我是默认的</span>
       </div>
     </div>
-    <router-view></router-view>
+    <div class="my-center">
+      <div class="my-content">
+        <button @click="add"> 增加</button>
+        <button @click="decrement"> 减少</button>
+      </div>
+    </div>
+
+    
   </div>
 </template>
 
@@ -18,7 +25,16 @@ export default {
     return {
       msg: 'hello/default vuejs'
     }
+  },
+  methods: {
+  	add () {
+	  	this.$store.commit('increment')
+	  },
+	  decrement () {
+	  	this.$store.commit('decrement')
+	  }
   }
+  
 }
 </script>
 
@@ -43,7 +59,7 @@ a {
 }
 .my-center {
   width: 80%;
-  height: 200px;
+  height: 100px;
   border: 1px solid yellow;
   margin: 0 auto;
   display: flex;

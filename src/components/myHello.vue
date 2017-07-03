@@ -9,6 +9,7 @@
         <router-link to="/hello/one">go to One</router-link>
       </div>
     </div>
+    <div>{{count}}</div>
     <router-view></router-view>
   </div>
 </template>
@@ -19,6 +20,11 @@ export default {
   data () {
     return {
       msg: 'myself vuejs'
+    }
+  },
+  computed: {
+    count () {
+      return this.$store.state.count
     }
   }
 }
